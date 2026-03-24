@@ -13,7 +13,6 @@
   ],
   "scripts": {
     "build": "tsc && npm run copy-assets",
-    "install": "npm install ../PromptRepository",
     "copy-assets": "copyfiles -u 1 src/**/*.json dist/src/",
     "test": "mocha --require ts-node/register --extensions ts,js test/*.test.ts --exit",
     "test-mini": "mocha --require ts-node/register --extensions ts,js test\\GenerateReadMeC4.test.ts --exit",
@@ -43,7 +42,7 @@
     "cheerio": "^1.0.0",
     "copyfiles": "^2.4.1",
     "mocha": "^10.0.0",
-    "prompt-repository": "file:../PromptRepository",
+    "prompt-repository": "npm:@jonverrier/prompt-repository@^0.3.16",
     "rimraf": "^6.0.1",
     "sinon": "^19.0.2",
     "ts-mocha": "^11.1.0",
