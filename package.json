@@ -1,11 +1,14 @@
 {
-  "name": "c4-diagrammer",
-  "version": "0.1.0",
+  "name": "@jonverrier/c4-diagrammer",
+  "version": "0.1.1",
   "description": "A Model Context Protocol server that generates C4 diagrams for source code",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jonverrier/C4-Agent.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
   "bin": {
@@ -17,9 +20,11 @@
   "scripts": {
     "build": "tsc && npm run copy-assets",
     "copy-assets": "copyfiles -u 1 src/**/*.json dist/src/",
-    "test": "mocha --require ts-node/register --extensions ts,js test/*.test.ts --exit",
-    "test-mini": "mocha --require ts-node/register --extensions ts,js test\\GenerateReadMeC4.test.ts --exit",
-    "test2": "mocha --loader=ts-node/esm --require ts-node/register --extensions ts --debug-brk --config D:/Code/McpDoc/.mocharc.json D:/Code/McpDoc/test/**/*.test.ts --exit",
+    "prepublishOnly": "npm run build",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --selectProjects unit",
+    "test:ci": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --selectProjects unit slow",
+    "test:mini": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --selectProjects mini",
+    "test:slow": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --selectProjects slow",
     "start": "node dist/src/index.js",
     "prepare": "npm run build",
     "watch": "tsc --watch",
@@ -28,29 +33,25 @@
     "c4-diagrammer": "node dist/src/index.js"
   },
   "dependencies": {
+    "@jonverrier/prompt-repository": "^0.3.23",
     "@modelcontextprotocol/sdk": "0.6.1",
     "mermaid": "10.9.3",
     "selenium-webdriver": "^4.30.0"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.0",
-    "@types/chai-as-promised": "^7.1.8",
-    "@types/expect": "^24.3.2",
-    "@types/mocha": "^10.0.0",
-    "@types/node": "^18.0.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.8",
     "@types/selenium-webdriver": "^4.1.28",
-    "@types/sinon": "^10.0.0",
-    "chai": "^4.3.0",
-    "chai-as-promised": "^7.1.2",
+    "@types/sinon": "^17.0.4",
     "cheerio": "^1.0.0",
     "copyfiles": "^2.4.1",
-    "mocha": "^10.0.0",
-    "prompt-repository": "npm:@jonverrier/prompt-repository@^0.3.16",
+    "cross-env": "^7.0.3",
+    "expect": "^29.7.0",
+    "jest": "^29.7.0",
     "rimraf": "^6.0.1",
     "sinon": "^19.0.2",
-    "ts-mocha": "^11.1.0",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
-    "tsconfig-paths": "^4.2.0",
-    "typescript": "^4.9.0"
+    "typescript": "^5.7.3"
   }
 }

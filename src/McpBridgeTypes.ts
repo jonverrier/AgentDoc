@@ -6,7 +6,7 @@
  */
 
 import { ListPromptsResult } from "@modelcontextprotocol/sdk/types.js";
-import {IPrompt, IPromptRepository} from "prompt-repository";
+import {IPrompt, IPromptRepository} from "@jonverrier/prompt-repository";
 
 /**
  * Base interface for argument objects

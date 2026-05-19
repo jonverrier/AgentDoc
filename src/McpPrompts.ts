@@ -16,7 +16,7 @@ import {
    GetPromptResult,
 } from '@modelcontextprotocol/sdk/types.js';
 
-import { IPromptRepository, PromptFileRepository } from 'prompt-repository';
+import { IPromptRepository, PromptFileRepository } from '@jonverrier/prompt-repository';
 
 import { throwMcpMethodNotFound } from "./McpThrow.js";
 import { getMcpPrompt, expandPrompt } from "./McpBridgeTypes.js";
