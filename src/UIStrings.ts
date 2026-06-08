@@ -4,6 +4,9 @@
  * This module contains string constants used throughout the application.
  */
 // Global Names
+export const AgentDocName = 'AgentDoc';
+
+/** Legacy filename brand for generated documentation artifacts (README.C4Diagrammer.md, etc.). */
 export const C4DiagrammerName = 'C4Diagrammer';
 
 // Strings used in Prompt definitions 

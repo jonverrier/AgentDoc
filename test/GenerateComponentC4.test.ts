@@ -6,7 +6,7 @@
 
 import { expect } from 'expect';
 import path from 'path';
-import { C4DiagrammerName } from '../src/UIStrings.js';
+import { AgentDocName, C4DiagrammerName } from '../src/UIStrings.js';
 import { generateComponentC4DiagramPromptId } from '../src/PromptIds.js';
 import { PromptFileRepository, throwIfUndefined } from '@jonverrier/prompt-repository';
 
@@ -60,7 +60,7 @@ describe('GenerateComponentC4Prompt', () => {
 
       expect(typeof result).toBe('string');
       expect(result).toContain('/test/path');
-      expect(result).toContain('Use the ' + C4DiagrammerName + ' tool');
+      expect(result).toContain('Use the ' + AgentDocName + ' tool');
       expect(result).toContain('C4Component.' + C4DiagrammerName + '.md');
     });
 

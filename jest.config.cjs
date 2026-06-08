@@ -1,5 +1,5 @@
 /**
- * Jest configuration for C4-Agent (ESM package).
+ * Jest configuration for AgentDoc (ESM package).
  */
 // Copyright (c) 2025, 2026 Jon Verrier
 

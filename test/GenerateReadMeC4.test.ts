@@ -7,7 +7,7 @@
 
 import { expect } from 'expect';
 import path from 'path';
-import { C4DiagrammerName } from '../src/UIStrings.js';
+import { AgentDocName, C4DiagrammerName } from '../src/UIStrings.js';
 import { PromptFileRepository, throwIfUndefined } from '@jonverrier/prompt-repository';
 import { generateReadmePromptId } from '../src/PromptIds.js';
 
@@ -110,7 +110,7 @@ describe('GenerateReadMePrompt', () => {
 
       const result = repository.expandUserPrompt(readmePrompt, args);
 
-      expect(result).toContain('Use the ' + C4DiagrammerName + ' tool');
+      expect(result).toContain('Use the ' + AgentDocName + ' tool');
       expect(result).toContain('README.' + C4DiagrammerName + '.md');
     });
 

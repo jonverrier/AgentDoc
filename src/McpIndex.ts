@@ -12,8 +12,8 @@ import { addFunctions } from "./McpFunctions.js";
 import { addPrompts } from "./McpPrompts.js";
 
 const server = new Server({
-  name: "mcp-repo-documenter",
-  version: "0.1.0",
+  name: "agent-doc",
+  version: "1.0.0",
 }, {
   capabilities: {
     tools: {},

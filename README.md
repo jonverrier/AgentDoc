@@ -1,6 +1,6 @@
-# C4-Agent
+# AgentDoc
 
-C4-Agent is a Model Context Protocol (MCP) server implementation designed to generate documentation for existing systems. It provides a set of MCP prompts and tools for generating code summaries and C4 architecture diagrams using Mermaid.js.
+AgentDoc (formerly C4-Agent) is a Model Context Protocol (MCP) server implementation designed to generate documentation for existing systems. It provides a set of MCP prompts and tools for generating code summaries and C4 architecture diagrams using Mermaid.js.
 
 [Learn more about MCP](https://www.anthropic.com/news/model-context-protocol).
 [Learn more about C4](https://c4model.com/).
@@ -305,7 +305,7 @@ To use the MCP server from a host, you need to update your AI development enviro
 ```json
 {
   "mcpServers": {
-    "C4-Agent": {
+    "AgentDoc": {
       "command": "node",
       "args": ["YourCodeRoot/C4-Agent/dist/src/index.js", "YourCodeRoot"]
     }
@@ -320,7 +320,7 @@ For specific IDE setup instructions, refer to:
 
 ## Related projects
 
-- **C4-Auto** – Upcoming automation tooling for C4 documentation (planned).
+- **AutoDoc** (`@jonverrier/auto-doc`) – Automated CLI sibling for batch C4 documentation generation. See [MIGRATION.md](MIGRATION.md) when upgrading from `@jonverrier/c4-diagrammer`.
 
 ## Documentation
 

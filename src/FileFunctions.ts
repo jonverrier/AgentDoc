@@ -63,7 +63,7 @@ let allowedDirectories: Array<string> = [];
 
 export async function setFileDirectories (argsIn: Array<string>) : Promise<void> {
    if (argsIn.length === 0) {
-      console.error("Usage: c4-diagrammer <allowed-directory> [additional-directories...]");
+      console.error("Usage: agent-doc <allowed-directory> [additional-directories...]");
       process.exit(1);
    }
    

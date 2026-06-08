@@ -7,7 +7,7 @@
 import { expect } from 'expect';
 import path from 'path';
 
-import { C4DiagrammerName } from '../src/UIStrings.js';
+import { AgentDocName, C4DiagrammerName } from '../src/UIStrings.js';
 import { PromptFileRepository, throwIfUndefined } from '@jonverrier/prompt-repository';
 import { generateRollupC4DiagramPromptId } from '../src/PromptIds.js';
 
@@ -127,7 +127,7 @@ describe('GenerateRollupC4Prompt', () => {
 
       const result = repository.expandUserPrompt(rollupC4Prompt, args);
 
-      expect(result).toContain('Use the ' + C4DiagrammerName + ' tool');
+      expect(result).toContain('Use the ' + AgentDocName + ' tool');
       expect(result).toContain('recursively search');
       expect(result).toContain('README.' + C4DiagrammerName + '.md');
     });

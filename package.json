@@ -1,7 +1,7 @@
 {
-  "name": "@jonverrier/c4-diagrammer",
-  "version": "0.1.1",
-  "description": "A Model Context Protocol server that generates C4 diagrams for source code",
+  "name": "@jonverrier/agent-doc",
+  "version": "1.0.0",
+  "description": "AgentDoc — MCP server for interactive C4 architecture documentation",
   "private": false,
   "repository": {
     "type": "git",
@@ -12,10 +12,12 @@
   },
   "type": "module",
   "bin": {
+    "agent-doc": "./dist/src/index.js",
     "c4_diagrammer": "./dist/src/index.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "MIGRATION.md"
   ],
   "scripts": {
     "build": "tsc && npm run copy-assets",
@@ -30,7 +32,7 @@
     "watch": "tsc --watch",
     "clean": "rimraf dist",
     "inspector": "npx @modelcontextprotocol/inspector dist/src/index.js",
-    "c4-diagrammer": "node dist/src/index.js"
+    "agent-doc": "node dist/src/index.js"
   },
   "dependencies": {
     "@jonverrier/prompt-repository": "^0.3.23",
