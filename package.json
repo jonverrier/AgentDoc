@@ -1,19 +1,19 @@
 {
   "name": "@jonverrier/agent-doc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AgentDoc — MCP server for interactive C4 architecture documentation",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonverrier/C4-Agent.git"
+    "url": "git+https://github.com/jonverrier/AgentDoc.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
   "type": "module",
   "bin": {
-    "agent-doc": "./dist/src/index.js",
-    "c4_diagrammer": "./dist/src/index.js"
+    "agent-doc": "dist/src/index.js",
+    "c4_diagrammer": "dist/src/index.js"
   },
   "files": [
     "dist",

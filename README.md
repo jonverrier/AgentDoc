@@ -257,8 +257,8 @@ The same qualifier applies to 'Chain of Thought'.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/jonverrier/C4-Agent.git
-   cd C4-Agent
+   git clone https://github.com/jonverrier/AgentDoc.git
+   cd AgentDoc
    ```
 
 2. Install dependencies. The MCP server uses `@jonverrier/prompt-repository` (and transitively `@jonverrier/assistant-common`). Both are published to GitHub Packages.
@@ -307,7 +307,7 @@ To use the MCP server from a host, you need to update your AI development enviro
   "mcpServers": {
     "AgentDoc": {
       "command": "node",
-      "args": ["YourCodeRoot/C4-Agent/dist/src/index.js", "YourCodeRoot"]
+      "args": ["YourCodeRoot/AgentDoc/dist/src/index.js", "YourCodeRoot"]
     }
   }
 } 

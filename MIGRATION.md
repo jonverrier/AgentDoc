@@ -52,5 +52,5 @@ Existing repos with `*.C4Diagrammer.md` files continue to work without renaming 
 
 ## Related
 
-- [AutoDoc MIGRATION.md](../C4-Auto/MIGRATION.md) — automated CLI sibling rename.
+- [AutoDoc MIGRATION.md](../AutoDoc/MIGRATION.md) — automated CLI sibling rename.
 - [AgentDoc README](README.md) — usage and prompts.
